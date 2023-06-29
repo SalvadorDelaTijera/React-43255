@@ -1,0 +1,14 @@
+.ConteinerDetalle{
+ width: 350px;
+ margin: 0 auto;
+
+   
+ }
+ .ConteinerDetalle img{
+    width: 300px;
+ }
+ .ConteinerDetalle p{
+    padding: 1rem;
+    justify-content: justify;
+   
+ }

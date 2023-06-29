@@ -1,0 +1,4 @@
+.contenedorPerfumes {
+    display: flex;
+    flex-wrap: wrap;
+}

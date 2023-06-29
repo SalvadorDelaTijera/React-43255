@@ -1,22 +1,34 @@
 import Carwidget from '../CarWidget/Carwidget'
+import { Link, NavLink } from 'react-router-dom'
 import './NavBar.css'
 
 const NavBar = () => {
   return (
     <header>
-        <h2>ONCE80.com.mx</h2>
+        <Link to={'/'}>
+          <h2>ONCE80</h2>
+        </Link>
         <nav>
             <ul>
-                <li>Inicio</li>
-                <li>Dama</li>
-                <li>Caballero</li>
-                <li>Unisex</li>
-                <li>Set de regalo</li>
+                <li>
+                    <NavLink to={'/'}>Inicio</NavLink>
+                </li>
+                <li>
+                    <NavLink to={'/categoria/Dama'}>Dama</NavLink>
+                </li>
+                <li>
+                    <NavLink to={'/categoria/Caballero'}>Caballero</NavLink>
+                </li>
+                <li>
+                    <NavLink to={'/categoria/Set'}>Set de Regalo</NavLink>
+                </li>
+                
             </ul>
         </nav>
         <Carwidget/>
         
     </header>
+    //<li>Contacto</li>
   )
 }
 

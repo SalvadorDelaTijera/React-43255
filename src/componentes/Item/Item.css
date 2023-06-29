@@ -1,0 +1,37 @@
+.cardPerfumes {
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 14rem;
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+.imgPerfume {
+    width: 150px;
+    object-fit: contain;
+    border-radius: 20px
+}
+
+.btnPerfumes {
+    background-color: #88bbc5;
+    color: white;
+    font-size: .7rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.infoPerfume{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: .4;
+}
+#tituloNombre {
+line-height: normal;
+}
