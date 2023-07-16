@@ -7,24 +7,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    height: 18rem;
 }
 
-
 .imgPerfume {
-    width: 150px;
+    width: 130px;
+    height: 130px;
     object-fit: contain;
     border-radius: 20px
+
 }
 
 .btnPerfumes {
-    background-color: #88bbc5;
     color: white;
     font-size: .7rem;
     border-radius: 10px;
     border: none;
     cursor: pointer;
     padding: 1rem;
+}
+.button{
+    background-color: #0079fb;
+    border-radius: 5px;
+    border: none;
+}
+.link{
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .infoPerfume{
@@ -34,4 +43,5 @@
 }
 #tituloNombre {
 line-height: normal;
+
 }

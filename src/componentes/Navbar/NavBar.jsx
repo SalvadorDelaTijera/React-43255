@@ -1,31 +1,35 @@
 import Carwidget from '../CarWidget/Carwidget'
 import { Link, NavLink } from 'react-router-dom'
 import './NavBar.css'
+import ItemCount from '../ItemCount/ItemCount'
 
 const NavBar = () => {
   return (
     <header>
-        <Link to={'/'}>
-          <h2>ONCE80</h2>
+        <Link className='linkOnce80' to={'/'}>
+                <div id='logo'><img src="/public/5.png" alt="" /></div>
         </Link>
         <nav>
             <ul>
                 <li>
-                    <NavLink to={'/'}>Inicio</NavLink>
+                    <NavLink className='navLink' to={'/'}>Inicio</NavLink>
                 </li>
                 <li>
-                    <NavLink to={'/categoria/Dama'}>Dama</NavLink>
+                    <NavLink className='navLink' to={'/categoria/Dama'}>Dama</NavLink>
                 </li>
                 <li>
-                    <NavLink to={'/categoria/Caballero'}>Caballero</NavLink>
+                    <NavLink className='navLink' to={'/categoria/Caballero'}>Caballero</NavLink>
                 </li>
                 <li>
-                    <NavLink to={'/categoria/Set'}>Set de Regalo</NavLink>
+                    <NavLink className='navLink' to={'/categoria/Set'}>Set de Regalo</NavLink>
+                </li>
+                <li>
+                <Carwidget/>
                 </li>
                 
             </ul>
         </nav>
-        <Carwidget/>
+        
         
     </header>
     //<li>Contacto</li>

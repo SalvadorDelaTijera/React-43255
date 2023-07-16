@@ -6,7 +6,9 @@ const misPerfumes = [
         tipo: 'Eau de Parfum',
         precio: 120,
         id: '101',
+        stock: 10,
         img:'../public/img/101.jpg'
+        
     },
 
     {
@@ -16,6 +18,7 @@ const misPerfumes = [
         tipo: 'Eau de Parfum',
         precio: 110,
         id: '102',
+        stock: 10,
         img:'../public/img/102.jpeg'
     },
 
@@ -26,6 +29,7 @@ const misPerfumes = [
         tipo: 'Eau de Parfum',
         precio: 95,
         id: '103',
+        stock: 10,
         img:'../public/img/103.jpg'
     },
 
@@ -36,6 +40,7 @@ const misPerfumes = [
         tipo: 'Eau de Parfum',
         precio: 90,
         id: '104',
+        stock: 10,
         img:'../public/img/104.jpeg'
     },
 
@@ -46,6 +51,7 @@ const misPerfumes = [
         tipo: 'Eau de Toilette',
         precio: 85,
         id: '105',
+        stock: 10,
         img:'../public/img/105.jpeg'
     },
 
@@ -56,6 +62,7 @@ const misPerfumes = [
         tipo: 'Eau de Toilette',
         precio: 90,
         id: '106',
+        stock: 10,
         img:'../public/img/106.jpeg'
     },
 
@@ -66,6 +73,7 @@ const misPerfumes = [
         tipo: 'Eau de Parfum',
         precio: 105,
         id: '107',
+        stock: 10,
         img:'../public/img/107.jpeg'      
     },
 
@@ -76,6 +84,7 @@ const misPerfumes = [
         tipo: 'Eau de Toilette',
         precio: 95,
         id: '108',
+        stock: 10,
         img:'../public/img/108.jpg'
     },
 
@@ -86,6 +95,7 @@ const misPerfumes = [
         tipo: 'Eau de Toilette',
         precio: 80,
         id: '109',
+        stock: 10,
         img:'../public/img/109.jpeg'
     },
 
@@ -96,6 +106,7 @@ const misPerfumes = [
         tipo: 'Eau de Toilette',
         precio: 85,
         id: '110',
+        stock: 10,
         img:'../public/img/110.jpg'
     },
 
@@ -106,6 +117,7 @@ const misPerfumes = [
         tipo: 'Eau de Parfum',
         precio: 120,
         id: '111',
+        stock: 10,
         img:'../public/img/111.jpeg'
     },
     {
@@ -116,6 +128,7 @@ const misPerfumes = [
         tipo: 'Eau de Parfum',
         precio: 110,
         id: '112',
+        stock: 10,
         img:'../public/img/112.jpg'
     },
     /*
@@ -126,6 +139,7 @@ const misPerfumes = [
         tipo: 'Eau de Parfum',
         precio: 115,
         id: 113,
+        stock: 10,
         img:'../public/img/113.jpeg'
     },
 
@@ -136,6 +150,7 @@ const misPerfumes = [
         tipo: 'Eau de Toilette',
         precio: 35,
         id: 201,
+        stock: 10,
         img:'../public/img/201.png'
     },
 
@@ -146,6 +161,7 @@ const misPerfumes = [
         tipo: 'Eau de Toilette',
         precio: 30,
         id: 202,
+        stock: 10,
         img:'../public/img/202.png'
     },
 
@@ -664,8 +680,8 @@ const misPerfumes = [
     return new Promise((res) =>{
         setTimeout(() =>{
             res(misPerfumes);
-        }, 2000)
-    })
+        }, 100) 
+    },)
 }
 
 //FUNCIÒN PARA RETORNaR UN SOLO ITEM por ID
@@ -674,7 +690,7 @@ export const  getUnPerfume = (id) =>{
         setTimeout(() => {
             const perfume = misPerfumes.find(prod => prod.id ===id);
             resolve(perfume);
-        }, 2000);
+        }, 100);
     })
 }
 
@@ -685,6 +701,6 @@ export const getPerfumesCategoria =(idCategoria)=>{
         setTimeout(()=>{
             const pefumesCategoria = misPerfumes.filter(prod => prod.idCategoria === idCategoria);
             resolve(pefumesCategoria)
-        }, 2000)
+        }, 100)
     })
 }

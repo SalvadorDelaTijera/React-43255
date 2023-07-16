@@ -11,6 +11,7 @@ const[perfumes, setPerfumes] = useState([]);
 
 const {idCategoria} = useParams();
 
+
   useEffect(() =>{
 
       const funcionPerfumes = idCategoria ? getPerfumesCategoria : getPerfumes;

@@ -13,8 +13,8 @@ const Item = ({nombre, marca, idCategoria, tipo, precio, id, img}) => {
           <h4>{idCategoria}</h4>
           <h3> ${precio}</h3>
           <p>Id {id}</p>
-          <button>
-          <Link to={`/item/${id}`}>Ver Detalle</Link>
+          <button className='button'>
+          <Link className="link"to={`/item/${id}`}>Ver Detalle</Link>
           </button>
         </div>
           
