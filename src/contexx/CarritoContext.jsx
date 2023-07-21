@@ -51,7 +51,7 @@ export const CarProvider =({children}) => {
         setTotal(0);
     };
 
-    //  PARA ENVIAR EL VALR ACTUAL DEL CARRITO Y LOS METODOS A LOS OCMPONENTES DE LA APP QUE LO NECESITEN
+    //  PARA ENVIAR EL VALoR ACTUAL DEL CARRITO Y LOS METODOS A LOS OCMPONENTES DE LA APP QUE LO NECESITEN
     return (
        <CarContext.Provider value={{carrito, total, cantidadTotal, agregarProducto, eliminarProducto, vaciarCarrito}}>
             {children}
