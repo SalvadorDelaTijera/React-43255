@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react"
 
 // va almacenar el valor del contador o el número de ariculos que el usuario seleccionara

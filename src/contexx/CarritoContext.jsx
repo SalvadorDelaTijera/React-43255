@@ -1,4 +1,4 @@
-import { useState, createContext, Children } from "react";
+import { useState, createContext, children } from "react";
 
 // creamos el nevo contexto del carrito
 export const CarContext = createContext({
@@ -16,7 +16,7 @@ export const CarProvider =({children}) => {
     console.log(carrito);
 
     //funcion agregar 
-    const agregarProducto = (item, cantidad) => {
+    const agregarProducto = (item, cantidad) =>{
         const productoExistente = carrito.find(prod => prod.item.id === item.id);
 
         if (!productoExistente) {
@@ -33,9 +33,9 @@ export const CarProvider =({children}) => {
             });
             setCarrito(carritoActualizado);
             setCantidadTotal(prev => prev + cantidad);
-            setTotal(prev => (item.precio * cantidad));
+            setTotal(_prev => (item.precio * cantidad));
         }
-    };
+    }
     // FUNCION ELIMINAR PRODUCTO DEL CARRITOO
     const eliminarProducto = (id) => {
         const productoEliminado = carrito.find(prod => prod.item.id === id);
@@ -58,4 +58,3 @@ export const CarProvider =({children}) => {
        </CarContext.Provider>
     );
 }
-// CHILDREN

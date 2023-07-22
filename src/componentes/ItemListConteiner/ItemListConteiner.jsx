@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react"
 import ItemList from "../ItemList/ItemList"
-//import { getPerfumes, getPerfumesCategoria } from "../../asynmock"
 import { useParams } from "react-router-dom"
 import './ItemLisConteiner.css'
 //--------------funciones Firebase---------------
@@ -14,7 +13,7 @@ const[perfumes, setPerfumes] = useState([]);
 const {idCategoria} = useParams();
 
   useEffect(()=>{
-    const misPerfumes = idCategoria ? query(collection(db, "inventario"), where("idCat", "==", idCategoria )) : collection(db, "inventario");
+    const misPerfumes = idCategoria ? query(collection(db, "inventario"), where("idCat", "==", idCategoria)) : collection(db, "inventario");
     getDocs(misPerfumes)
     .then( res =>{
       const nuevosPerfumes = res.docs.map( doc =>{
@@ -26,15 +25,6 @@ const {idCategoria} = useParams();
     .catch(error => console.log(error))
 
   }, [idCategoria])
-
-/*
-  useEffect(() =>{
-      const funcionPerfumes = idCategoria ? getPerfumesCategoria : getPerfumes;
-        funcionPerfumes(idCategoria)
-        .then(res => setPerfumes(res))
-        .catch(error => console.log(error))
-  },[idCategoria])
-*/
   return(
     <>
     <div>
@@ -43,13 +33,8 @@ const {idCategoria} = useParams();
       </div>
       < ItemList perfumes={perfumes} />
     </div>
-    </>
+    </> 
   )
 }
-  /*
-    getPerfumes()
-      .then(respuesta => setPerfumes(respuesta))
-      .catch(error => console.log(error))
-      */
 
 export default ItemListConteiner

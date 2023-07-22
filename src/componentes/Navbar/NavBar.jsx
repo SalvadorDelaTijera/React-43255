@@ -32,7 +32,6 @@ const NavBar = () => {
         
         
     </header>
-    //<li>Contacto</li>
   )
 }
 

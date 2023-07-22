@@ -3,7 +3,7 @@ import {getFirestore} from "firebase/firestore";
 
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDI6wpnINQhiiLx0aKhETSpv74wG5sp6EU",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: "inventario-bcbf6.firebaseapp.com",
   projectId: "inventario-bcbf6",
   storageBucket: "inventario-bcbf6.appspot.com",
@@ -12,5 +12,5 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
