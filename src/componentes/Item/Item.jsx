@@ -6,7 +6,7 @@ const Item = ({nombre, marca, idCategoria, tipo, precio, id, img, stock}) => {
     <div className='cardPerfumes'>
       <img className='imgPerfume' src={img} alt={nombre}/>
         <div className='infoPerfume'>
-          <h3 id='tituloNombre'>{nombre}</h3>
+          <h3 id ='tituloNombre'>{nombre}</h3>
           <p>{marca}</p>
           <h4>{idCategoria}</h4>
           <h3> ${precio}</h3>

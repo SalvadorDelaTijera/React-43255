@@ -4,7 +4,8 @@ import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
 import { CarContext } from '../../contexx/CarritoContext'
 
-const ItemDetail =({ id, nombre, precio, img, stock }) => {
+
+const ItemDetail =({ id, nombre, precio, img, descripcion, stock}) => {
 
   // cantidad de productos agregados
   const [agregarCantidad, setAgregarCantidad] = useState(0);
@@ -15,7 +16,7 @@ const ItemDetail =({ id, nombre, precio, img, stock }) => {
   const handlerCantidad = (cantidad) => {
     setAgregarCantidad(cantidad)
 
-    const item = ({id, nombre, precio});
+    const item = ({id, nombre, precio, img, descripcion, stock});
     agregarProducto(item, cantidad);
   }
 
@@ -24,10 +25,10 @@ const ItemDetail =({ id, nombre, precio, img, stock }) => {
       <h3>{nombre}</h3>
       <h4>Precio: {precio}</h4>
       <h5>ID: {id}</h5>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil impedit accusantium sed vitae, nisi officia dolorum obcaecati beatae debitis animi.</p>
+      <p> descripciòn: {descripcion}</p>
       <img src={img} alt={nombre} />
       {
-        //MONTAJE Y DESMONATJE DE COMPONENTE//
+        //MONTAJE Y DESMONtajE DE COMPONENTE//
       }
       {agregarCantidad > 0 ? (<Link to="/cart">Terminar Compra</Link>) : (<ItemCount inicial={1} stock={stock} funcAgregar={handlerCantidad} />)}
     </div>

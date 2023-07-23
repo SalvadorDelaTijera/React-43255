@@ -25,6 +25,7 @@ const Checkout = () => {
     //--------- validaciòn de email-------
     if(email !== emailConfirmation){
         setError("Los email no coinciden");
+        return;
     }
     //-------- EL OBJETO DE LA ORDEN--------
     const orden ={
@@ -50,12 +51,12 @@ const Checkout = () => {
             const productoDoc = await getDoc(productoRef);
             const stockActual = productoDoc.data().stock;
             await updateDoc(productoRef,{
-                stock: stockActual - productoRef.cantidad
+                stock: stockActual - productoOrden.cantidad
             })
     })
     )
         .then(()=>{
-            addDoc(collection(db, "inventario"), orden)
+            addDoc(collection(db, "ordenes"), orden)
                 .then((docRef)=>{
                     setOrdenId(docRef.id);
                     vaciarCarrito();
@@ -66,8 +67,8 @@ const Checkout = () => {
                 })
         })
         .catch((error)=>{
-            console.log("Error al actualizar el stock");
-            setError("Error al actualizar el stock. Intenta de nuevo")
+            console.log("Error al actualizar el Stock");
+            setError("Error al actualizar el Stock. Intenta de nuevo")
         })
 
     }
@@ -81,6 +82,9 @@ const Checkout = () => {
                                 {producto.item.nombre} x {producto.cantidad}
                             </p>
                             <p>Precio $ {producto.item.precio}</p>
+                            <hr />
+                            <h4>Total: $ {total}</h4>
+                            <hr />
                             <hr />
                         </div>
                     ))}
@@ -119,3 +123,5 @@ const Checkout = () => {
     )
 }
 export default Checkout
+
+

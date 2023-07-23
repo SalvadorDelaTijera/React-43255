@@ -10,7 +10,7 @@ export const CarContext = createContext({
  // PROVIDER
 
 export const CarProvider =({children}) => {
-    const [carrito, setCarrito] = useState([]); //creamos un estado local carrito 
+    const [carrito, setCarrito] = useState([]); // estado local carrito 
     const [total, setTotal] = useState(0);
     const [cantidadTotal, setCantidadTotal] = useState(0);
     console.log(carrito);
