@@ -17,7 +17,7 @@ function ItemDetailConteiner() {
       getDoc(nuevoDoc)
       .then(res =>{
         const data = res.data();
-        const nuevoPerfume = {id: res.id, ...data};
+        const nuevoPerfume = {...data, id: res.id };
         setPerfume(nuevoPerfume);
       })
       .catch(error => console.log(error))

@@ -25,7 +25,7 @@ const ItemDetail =({ id, nombre, precio, img, descripcion, stock}) => {
       <h3>{nombre}</h3>
       <h4>Precio: {precio}</h4>
       <h5>ID: {id}</h5>
-      <p> descripciòn: {descripcion}</p>
+      <p> {descripcion}</p>
       <img src={img} alt={nombre} />
       {
         //MONTAJE Y DESMONtajE DE COMPONENTE//

@@ -50,7 +50,7 @@ const Checkout = () => {
             const productoRef = doc(db, "inventario",productoOrden.id);
             const productoDoc = await getDoc(productoRef);
             const stockActual = productoDoc.data().stock;
-            await updateDoc(productoRef,{
+                await updateDoc(productoRef,{
                 stock: stockActual - productoOrden.cantidad
             })
     })
@@ -73,7 +73,7 @@ const Checkout = () => {
 
     }
   return (
-    <div>
+    <div> 
         <h3>Verifica tu pedido</h3>
             <form onSubmit={manejadorFormulario}>
                     {carrito.map(producto =>(
