@@ -2,10 +2,11 @@
 import NavBar from './componentes/Navbar/NavBar'
 import ItemListConteiner from './componentes/ItemListConteiner/ItemListConteiner';
 import ItemDetailConteiner from './componentes/ItemDetailConteiner/ItemDetailConteiner';
+import {CarProvider}  from './contexx/CarritoContext';
 import Cart from './componentes/Cart/Cart';
 import Checkout from './componentes/Checkout/Checkout';
 import { BrowserRouter, Routes, Route  } from "react-router-dom";
-import {CarProvider}  from './contexx/CarritoContext';
+
 
 
 

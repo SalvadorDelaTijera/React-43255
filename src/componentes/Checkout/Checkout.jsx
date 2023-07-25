@@ -74,7 +74,7 @@ const Checkout = () => {
     }
   return (
     <div>
-        <h3>Checkout</h3>
+        <h3>Verifica tu pedido</h3>
             <form onSubmit={manejadorFormulario}>
                     {carrito.map(producto =>(
                         <div key={producto.id}>

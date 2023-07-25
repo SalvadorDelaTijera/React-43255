@@ -13,12 +13,12 @@ const[perfumes, setPerfumes] = useState([]);
 const {idCategoria} = useParams();
 
   useEffect(()=>{
-    const misPerfumes = idCategoria ? query(collection(db, "inventario"), where("idCat", "==", idCategoria)) : collection(db, "inventario");
+    const misPerfumes = idCategoria ? query(collection(db, "inventario"), where("idCategoria", "==", idCategoria)) : collection(db, "inventario");
     getDocs(misPerfumes)
     .then( res =>{
       const nuevosPerfumes = res.docs.map( doc =>{
         const data = doc.data();
-        return {id: doc.id, ...data}
+        return {...data, id: doc.id, }
       })
       setPerfumes(nuevosPerfumes);
     })

@@ -5,16 +5,16 @@ import { useState } from "react"
 const ItemCount = ({inicial, stock, funcAgregar}) => {
     const[contador, setContador] = useState(inicial);
 
-    //Funcones para eventos sumar / restar contador
+    //Funcones para eventos sumar 
     const incrementar = ()=>{
-            if (contador < stock){
+           
                 setContador(contador + 1);
-            }
-    }
+    }   
+
+    //restar contador
     const decrementar=()=>{
-        if (contador > inicial){
-            setContador(contador - 1);
-        }
+        setContador(contador - 1);
+      
     }
 
 
